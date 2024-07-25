@@ -29,14 +29,16 @@ menu {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
 }
 
 .page-wrapper>div {
-    width: 90%;
-    max-width: 60rem;
     overflow: auto;
-    padding: 2rem;
+}
+
+.content {
+    width: 90%;
+    max-width: 65rem;
+    margin: 2rem auto;
 }
 
 header {
