@@ -10,6 +10,9 @@ if (isset($data['password-lenght']) && isset($data['repetitions'])) {
         $numbers_allowed = !isset($data['disabled-chars-numbers']) ? true : false;
         $symbols_allowed = !isset($data['disabled-chars-symbols']) ? true : false;
 
+        session_start();
+        $_SESSION['password'] = generate_password($data['password-lenght'], $repetitions_allowed, $letters_allowed, $numbers_allowed, $symbols_allowed);
+        header('Location: ./generated-landing-page.php');
     }
 }
 ?>
