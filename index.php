@@ -1,5 +1,17 @@
 <?php
-include_once './functions/functions.php';
+require_once './functions/functions.php';
+
+$data = $_GET;
+if (isset($data['password-lenght']) && isset($data['repetitions'])) {
+    if ($data['password-lenght'] > 7 && $data['password-lenght'] < 33) {
+        $repetitions_allowed = $data['repetitions'] === 'true' ? true : false;
+
+        $letters_allowed = !isset($data['disabled-chars-letters']) ? true : false;
+        $numbers_allowed = !isset($data['disabled-chars-numbers']) ? true : false;
+        $symbols_allowed = !isset($data['disabled-chars-symbols']) ? true : false;
+
+    }
+}
 ?>
 
 <!DOCTYPE html>
@@ -24,7 +36,7 @@ include_once './functions/functions.php';
                 </header>
 
                 <main>
-                    <form action="">
+                    <form action="index.php" method="GET">
                         <div class="inputs-group">
                             <p class="group-legend">Password length:</p>
                             <menu class="inputs-list">
