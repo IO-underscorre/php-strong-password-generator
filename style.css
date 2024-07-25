@@ -7,15 +7,120 @@
 :root {
     --clr-primary: #d6b6d6;
     --clr-secondary: #32213A;
-    --clr-tertiary: #575b6e;
+    --clr-transparency: #00000080;
+
+    font-size: 16px;
 }
 
 body {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-optical-sizing: auto;
     background-color: var(--clr-secondary);
 }
 
 ul,
 menu {
     list-style: none;
+}
+
+.page-wrapper {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.page-wrapper>div {
+    width: 90%;
+    max-width: 60rem;
+    overflow: auto;
+    padding: 2rem;
+}
+
+header {
+    color: var(--clr-primary);
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+main {
+    background-color: var(--clr-primary);
+    padding: 2rem;
+    border-radius: .5rem;
+    color: var(--clr-secondary);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.inputs-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .75rem;
+}
+
+.group-legend {
+    flex: 3 0 15rem;
+    font-size: 1.125rem;
+}
+
+.inputs-list {
+    flex: 1 0 5rem;
+    display: flex;
+    flex-direction: column;
+    gap: .75rem;
+}
+
+.input-container {
+    display: flex;
+    align-items: center;
+    gap: .25rem;
+}
+
+label {
+    font-weight: 700;
+}
+
+[type='number'] {
+    min-width: 50%;
+    outline: none;
+}
+
+[type='number'],
+button {
+    padding: .125em .25em;
+    border-radius: .25em;
+    border: 2px solid var(--clr-secondary);
+}
+
+[type='checkbox'],
+[type='radio'] {
+    accent-color: var(--clr-secondary);
+}
+
+button {
+    appearance: none;
+    box-shadow: 0 0 .25em var(--clr-transparency);
+    background-color: var(--clr-secondary);
+    color: var(--clr-primary);
+    font-weight: 700;
+}
+
+button:hover:not(:active) {
+    filter: brightness(125%);
+}
+
+button:active {
+    box-shadow: inset 0 0 .5em var(--clr-transparency);
+    filter: brightness(75%);
+}
+
+[type='reset'] {
+    background-color: var(--clr-primary);
+    color: var(--clr-secondary);
 }
