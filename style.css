@@ -1,0 +1,21 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --clr-primary: #d6b6d6;
+    --clr-secondary: #32213A;
+    --clr-tertiary: #575b6e;
+}
+
+body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: var(--clr-secondary);
+}
+
+ul,
+menu {
+    list-style: none;
+}
