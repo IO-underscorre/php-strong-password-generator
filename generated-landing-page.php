@@ -35,6 +35,8 @@ if (!isset($_SESSION['password'])) {
                             <?php echo $_SESSION['password']; ?>
                         </b>
                     </div>
+
+                    <a href="./logout.php" class="base_btn">Back</a>
                 </main>
             </div>
         </div>
