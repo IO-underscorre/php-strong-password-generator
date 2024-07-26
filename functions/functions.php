@@ -4,7 +4,7 @@ function get_password($password_length, $are_repetitions_allowed, $allowed_chars
     $allowed_chars = $allowed_chars_string;
     $password_result = '';
 
-    for ($index = 0; strlen($allowed_chars) && $index < $password_length; $index++) {
+    while (strlen($allowed_chars) && strlen($password_result) < $password_length) {
         $random_allowed_chars_index = rand(0, strlen($allowed_chars) - 1);
 
         $password_result .= substr($allowed_chars, $random_allowed_chars_index, 1);
