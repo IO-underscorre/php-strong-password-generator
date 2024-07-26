@@ -17,7 +17,6 @@ function get_password($password_length, $are_repetitions_allowed, $allowed_chars
     return htmlspecialchars($password_result);
 }
 
-
 function generate_password($password_length, $are_repetitions_allowed, $are_char_letters_allowed, $are_char_numbers_allowed, $are_char_symbols_allowed)
 {
     $allowed_chars = '';
