@@ -7,6 +7,7 @@
 :root {
     --clr-primary: #d6b6d6;
     --clr-secondary: #32213A;
+    --clr-details: #ffffb3;
     --clr-transparency: #00000080;
 
     font-size: 16px;
@@ -131,13 +132,13 @@ label {
 .generated-password-container {
     text-align: center;
     overflow-wrap: break-word;
+    font-size: 1.75rem;
+    margin-bottom: 1.5rem;
+    color: var(--clr-details);
 }
 
 .generated-password-container>b {
     display: inline-block;
     max-width: 100%;
-    padding: .25rem .5rem;
-    border-radius: .25rem;
-    background-color: var(--clr-secondary);
-    color: var(--clr-primary);
+    text-shadow: 0 0 .25rem var(--clr-details);
 }
