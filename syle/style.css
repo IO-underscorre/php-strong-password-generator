@@ -94,7 +94,7 @@ label {
 }
 
 [type='number'],
-button {
+.base_btn {
     padding: .125em .25em;
     border-radius: .25em;
     border: 2px solid var(--clr-secondary);
@@ -105,7 +105,8 @@ button {
     accent-color: var(--clr-secondary);
 }
 
-button {
+.base_btn {
+    display: inline-block;
     appearance: none;
     box-shadow: 0 0 .25em var(--clr-transparency);
     background-color: var(--clr-secondary);
@@ -113,11 +114,11 @@ button {
     font-weight: 700;
 }
 
-button:hover:not(:active) {
+.base_btn:hover:not(:active) {
     filter: brightness(125%);
 }
 
-button:active {
+.base_btn:active {
     box-shadow: inset 0 0 .5em var(--clr-transparency);
     filter: brightness(75%);
 }

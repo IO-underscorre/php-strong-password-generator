@@ -82,8 +82,8 @@ if (isset($data['password-lenght']) && isset($data['repetitions'])) {
                         </div>
 
                         <div class="inputs-group">
-                            <button type="submit">Submit</button>
-                            <button type="reset">Reset</button>
+                            <button type="submit" class="base_btn">Submit</button>
+                            <button type="reset" class="base_btn">Reset</button>
                         </div>
                     </form>
                 </main>
